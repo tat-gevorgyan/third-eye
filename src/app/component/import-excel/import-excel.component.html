@@ -1,0 +1,20 @@
+<div style="width:80%; margin: auto; overflow: hidden;">
+	<div style="width:50%; display: flex; justify-content: space-between; float: right;">
+		<p style="font-size: 16pt;">Select all the cells you want to analyze</p>
+		<div>
+			<button (click)="start()">Start</button>
+		</div>
+	</div>
+
+	<table class="sjs-table" style="margin-top: 30pt;">
+	  <tr *ngFor="let row of importedData; let i1 = index">
+	    <td *ngFor="let val of row; let i2 = index"
+	    (click)="setSelection(i1, i2)"
+	    [class]="isSelected(i1, i2) != null ? 'selected' : 'non-selected'">
+	      {{val}}
+	    </td>
+	  </tr>
+	</table>
+</div>
+
+<app-loading #loading (onDone)="navigate()"></app-loading>

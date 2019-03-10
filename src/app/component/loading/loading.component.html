@@ -1,0 +1,34 @@
+<div class="loading" [style.display]="getDisplay()">
+	<div class="center-area">
+		<div class="loading-text-area">
+			<p>When your themes are ready, you can save the ones that work for you.</p>
+			<div>
+				<button>Save</button>
+			</div>
+		</div>
+		<div class="progress-bar">
+			<circle-progress
+			[percent]="percent"
+			[radius]="40"
+			[space]= "-10"
+			[outerStrokeWidth]= "10"
+			[outerStrokeColor]= "'#178484'"
+			[outerStrokeGradientStopColor]= "'#53a9ff'"
+			[outerStrokeLinecap]= "'square'"
+			[showInnerStroke]= "false"
+			[innerStrokeWidth]= "10"
+			[title]="percent + '%'"
+			[titleColor]= "'#178484'"
+			[subtitleFontSize]= "24"
+			[animateTitle]= "false"
+			[animationDuration]= "1000"
+			[showUnits]= "false"
+			[showBackground]= "false"
+			[showSubtitle]="false"
+			[startFromZero]= "false"
+			[animation]="true"
+			[responsive]="true">
+			</circle-progress>
+		</div>
+	</div>
+</div>

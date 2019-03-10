@@ -1,0 +1,148 @@
+* {
+	color: #434343;
+	font-weight: normal;
+	margin: 0;
+}
+
+.home-content {
+	width: 75%;
+	margin: auto;
+	margin-top: 30pt;
+	padding-bottom: 150pt;
+}
+
+h1 {
+	line-height: 1.2;
+	font-size: 40pt;
+}
+
+h2 {
+	line-height: 1.2;
+	font-size: 27pt;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 21pt;
+}
+
+.workout {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40pt;
+}
+
+.workout-column {
+	font-size: 18pt;
+	line-height: 1.2;
+}
+
+.workout-column:first-child {
+	width: 52%;
+}
+
+.workout-column:last-child {
+	width: 47%;
+}
+
+.how-it-works {
+	margin-top: 20pt;
+}
+
+.how-it-works li {
+	margin-top: 12pt;
+}
+
+.how-it-works li div {
+  padding: 0 70pt 0 20pt;
+}
+
+.textarea-container {
+	width: 100%;
+}
+
+.theme-data-textarea {
+	width: 93%;
+	height: 117pt;
+	border-radius: 10px;
+	padding: 10pt;
+	resize: none;
+	border-color: #434343;
+	margin-top: 20pt;
+	font-size: 16pt;
+}
+
+.theme-data-textarea::placeholder {
+	color: #d8d5d5;
+	font-size: 16pt;
+}
+
+.start-area {
+	margin-top: 8pt;
+	display: flex;
+	justify-content: space-between;
+}
+
+.start-area button {
+	background-color: #178484;
+	border: none;
+	font-size: 16pt;
+	color: white;
+	border-radius: 3px;
+}
+
+.start-area button:first-child {
+	padding: 9pt 40pt;
+}
+
+.start-area button:last-child {
+	padding: 9pt 16pt;
+}
+
+.start-area span {
+	padding-top: 8pt;
+	font-size: 16pt;
+	font-style: italic;
+}
+
+.test-drive {
+	font-size: 15pt;
+	margin-top: 35pt;
+	position: absolute;
+}
+
+.test-drive a {
+	color: #178484;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+ 	.workout {
+ 		display: block !important;
+ 	} 
+ 	.workout-column {
+ 		width: 100% !important;
+ 	}
+ 	.workout-column:last-child {
+ 		margin-top: 40pt;
+ 		width: 80% !important;
+ 	}
+}
+
+@media only screen and (max-width: 560px) {
+	.start-area {
+		display: block !important;
+	}
+	.start-area button {
+		width: 100%;
+		padding-top: 9pt !important;
+		padding-bottom: 9pt !important;
+	}
+	.start-area span {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 8pt;
+	}
+}

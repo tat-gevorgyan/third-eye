@@ -1,0 +1,22 @@
+.selected {
+	border: 1px solid grey;
+	background-color: #d8d5d5; 
+}
+
+.non-selected {
+	border: none;
+	background-color: #fff;
+}
+
+td {
+	cursor: pointer;
+}
+
+button {
+	background-color: #178484;
+	border: none;
+	font-size: 16pt;
+	color: white;
+	border-radius: 3px;
+	padding: 9pt 40pt;
+}

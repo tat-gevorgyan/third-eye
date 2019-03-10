@@ -1,0 +1,30 @@
+.header-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: white;
+}
+
+.fixed-header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 10px 0 10px !important;
+	font-weight: bold;
+	border-bottom: 1px solid #434343;
+}
+
+.header-logo {
+	height: 50px;
+	width: 50px;
+}
+
+.header-registration {
+	padding-top: 10px;
+}
+
+.header-registration a {
+	font-size: 17pt;
+	text-decoration: none;
+	color: #434343;
+}

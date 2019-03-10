@@ -1,0 +1,49 @@
+<div class="home-content">
+	<h1>Focus on the bigger picture with 3RD EYE</h1>
+	<h2>3RD EYE is an artificial intelligence that reveals the hidden themes in big sets of text.</h2>
+	<div class="workout">
+		<div class="workout-column">
+			<h3>How it works</h3>
+			<ol class="how-it-works">
+				<li>
+					<div>
+						Upload a big set of text–something like survey responses, business reviews, or related Tweets
+					</div>
+				</li>
+				<li>
+					<div>
+						Give our servers a few minutes to find all the themes and classify every piece of text (i.e., distinct responses, reviews, Tweets)
+					</div>
+				</li>
+				<li>
+					<div>
+						Browse through the results and save the themes that work for you.
+					</div>
+				</li>
+			</ol>
+		</div>
+		<div class="workout-column">
+			<h3>Let's uncover the themes in your data</h3>
+			<div class="textarea-container">
+				<textarea [placeholder]="textAreaPlaceholderText"
+				class="theme-data-textarea"
+				[(ngModel)]="inputText"></textarea>
+			</div>
+			<div class="start-area">
+				<button (click)="start()">Start</button>
+				<span>Or,</span>
+				<button (click)="fileInput.click()">Upload Spreadsheet</button>
+				<input #fileInput type="file"
+				style="display: none;"
+				(change)="upload($event)"
+				placeholder="Upload file"
+				accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, .csv">
+			</div>
+			<div class="test-drive">
+				<p>Wanna take a test drive with some sample text instead?</p>
+				<a href=#>Reveal the themes from something trending on Twitter ...</a>
+			</div>
+		</div>
+	</div>
+</div>
+<app-loading #loading (onDone)="navigate()"></app-loading>
