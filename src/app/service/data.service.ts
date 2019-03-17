@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 export class DataService {
 	private clusteredData: Array<Object> = [];
 
-	private importedExcelData: any = [];
+	private importedExcelData: Array<any> = [];
+
+	private sheetNames: Array<string> = [];
 
 	constructor() { }
 
@@ -16,11 +18,20 @@ export class DataService {
 		return this.clusteredData;
 	}
 
-	public setImportedExcelData(excelData: any): void {
-		this.importedExcelData = excelData;
+	public resetExcelData(): void {
+		this.importedExcelData = [];
+	}
+
+	public setImportedExcelData(index: number, sheetName: string, excelData: any): void {
+		this.importedExcelData[index] = excelData;
+		this.sheetNames[index] = sheetName;
 	}
 
 	public getImportedExcelData(): any {
 		return this.importedExcelData;
+	}
+
+	public getSheetNames(): Array<string> {
+		return this.sheetNames;
 	}
 }

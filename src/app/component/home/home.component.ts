@@ -33,8 +33,6 @@ export class HomeComponent {
 		this.loadingComponent.setPercent(100);
 	}
 
-
-
 	start() {
 		this.file = null;
 		this.loadingComponent.start();
@@ -46,8 +44,8 @@ export class HomeComponent {
 	}
 
 	navigate() {
-		this.file ? 
-			this.router.navigate(['/import']) : 
+		this.file ?
+			this.router.navigate(['/import']) :
 			this.router.navigate(['/clustered']);
 	}
 }

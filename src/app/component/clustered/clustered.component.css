@@ -28,7 +28,6 @@
 	width: 100%;
 	max-width: 100%;
 	overflow-x: scroll;
-	overflow-y: scroll;
 	margin-top: 20pt;
 	border-spacing: initial;
 }
@@ -40,24 +39,46 @@
 	min-height: 40pt;
 	color: white;
 	font-size: 17pt;
-	min-width: 120pt;
 	border-right: 2px solid #fff;
+}
+
+.clustered-data-table th:first-child {
+	position: absolute;
+	width: 200pt !important;
+}
+
+.clustered-data-table th:nth-child(2) {
+	width: 200pt !important;
 }
 
 .clustered-data-table td {
 	padding: 10pt;
 	min-height: 40pt;
+	height: 144pt;
+	max-height: 144pt;
 	border: 1px solid #999;
 	margin: 0;
-	min-width: 250pt;
+	min-width: 200pt;
+	overflow: auto;
 }
 
+.clustered-data-table td:first-child::-webkit-scrollbar { width: 5px !important }
+
 .clustered-data-table tr td:first-child {
+	position: absolute;
 	background-color: #999;
 	color: white;
 	font-weight: bold;
-	min-width: 150pt;
 	border-bottom: 1px solid #d8d5d5;
+	width: 200pt !important;
+}
+
+.clustered-data-table tr td:nth-child(2) {
+	width: 200pt !important;
+}
+
+.clustered-data-table span {
+	display: block;
 }
 
 .clustered-data-table button {
@@ -69,6 +90,7 @@
 	font-weight: bold;
 	margin-top: 5pt;
 	font-size: 15pt;
+	display: block;
 }
 
 .clustered-data-table input {
@@ -79,6 +101,7 @@
 	border: 2px solid #8e8e8e;
 	font-size: 15pt;
 	margin-top: 20pt;
+	display: block;
 }
 
 .clustered-data-table input::placeholder {
@@ -97,4 +120,27 @@
 	font-size: 16pt;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+div.scrollable {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		display: block;
+		text-align: left;
+	}
+
+	.header a {
+		display: block;
+	}
+
+	.clustered-data-table {
+		position: relative;
+	}
 }

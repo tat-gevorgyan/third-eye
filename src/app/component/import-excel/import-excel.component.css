@@ -1,22 +1,108 @@
 .selected {
-	border: 1px solid grey;
-	background-color: #d8d5d5; 
+	background-color: #d0dbf5;
+	border-color: #99b7fd;
 }
 
 .non-selected {
-	border: none;
-	background-color: #fff;
+	background-color: #f9f9f9;
 }
 
-td {
-	cursor: pointer;
-}
-
-button {
+.startButton {
 	background-color: #178484;
 	border: none;
 	font-size: 16pt;
 	color: white;
 	border-radius: 3px;
 	padding: 9pt 40pt;
+}
+
+.start-area {
+	margin: 30pt 0 18pt 45%; 
+	display: flex; 
+	justify-content: space-between;
+}
+
+.start-area p {
+	margin: 0;
+	margin-right: 10pt;
+	font-size: 16pt;
+}
+
+.page-container {
+	width: 80%; 
+	margin: auto;
+}
+
+table {
+	border: 1px solid #f1f1f1;
+	border-width: 1px 0px 0px 1px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	overflow-x: auto;
+	width: 100%;
+	display: block;
+}
+
+th {
+	background-color: #ededed;
+	border: 1px solid #ACA899;
+	border-width: 0px 1px 1px 0px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+td {
+	border: 0px;
+	background-color: #f9f9f9;
+	padding: 0px 4px 0px 2px;
+	border: 1px solid #d8d8d8;
+	border-width: 0px 1px 1px 0px;
+	cursor: pointer;
+	min-width: 100pt;
+}
+
+td.heading {
+	background-color: #ededed;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #ACA899;
+	border-width: 0px 1px 1px 0px;
+	min-width: 35pt;
+}
+
+.sheets {
+	overflow: hidden;
+}
+
+.sheets button {
+    border: 1px solid #dadada;
+    padding: 5px 12px;
+    margin-right: 3px;
+    font-size: 16px;
+}
+
+.sheet-selected {
+	background-color: #dadada;
+}
+
+.sheet-non-selected {
+	background-color: #ededed;
+}
+
+.selected-column {
+	background-color: #dadada;
+}
+
+@media screen and (max-width: 680px) {
+	.start-area {
+		display: block;
+		width: 90%;
+		margin: auto;
+		margin-bottom: 20pt;
+		text-align: center;
+	}
+
+	.start-area p {
+		margin: 10pt 0;
+	}
 }

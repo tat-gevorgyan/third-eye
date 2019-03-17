@@ -1,23 +1,30 @@
 <div class="clustered">
 	<div class="header">
-		<input class="project-name-input" type="text" name="projectName" placeholder="Name your project ..."/>
+		<input class="project-name-input"
+		type="text" name="projectName"
+		placeholder="Name your project ..."/>
 		<a href="#">View saved themes &gt;</a>
 	</div>
-
 	<table class="clustered-data-table">
 		<tr>
 			<th>Themes</th>
+			<th></th>
 			<th [attr.colspan]="maxHeaderSize">Theme Examples</th>
 		</tr>
-		<tr *ngFor="let item of clusteredData">
+		<tr *ngFor="let item of clusteredData;">
 			<td>
-				<p>KEYWORDS</p>
-				<span>{{item['keywords']}}</span>
-				<input placeholder="Theme title ..."/>
-				<button>Save</button>
+				<div class=scrollable>
+					<p>KEYWORDS</p>
+					<span>{{item['keywords']}}</span>
+					<input placeholder="Theme title ..."/>
+					<button>Save</button>
+				</div>
 			</td>
-			<td *ngFor="let theme of item['themes']">
-				{{theme}}
+			<td></td>
+			<td *ngFor="let theme of item['themes']" valign="top">
+				<div class=scrollable>
+					<p [innerHTML]="getClusteredString(item, theme)"></p>
+				</div>
 			</td>
 			<td *ngFor="let i of getEmptyCellCountArray(item)">
 			</td>

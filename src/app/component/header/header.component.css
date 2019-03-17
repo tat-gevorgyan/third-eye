@@ -4,23 +4,25 @@
 	top: 0;
 	width: 100%;
 	background-color: white;
+	z-index: 9999;
 }
 
 .fixed-header {
-	display: flex;
-	justify-content: space-between;
 	margin: 0 10px 0 10px !important;
 	font-weight: bold;
 	border-bottom: 1px solid #434343;
+	overflow: hidden;
 }
 
 .header-logo {
-	height: 50px;
 	width: 50px;
+	float: left;
+	cursor: pointer;
 }
 
 .header-registration {
-	padding-top: 10px;
+	padding-top: 8px;
+	float: right;
 }
 
 .header-registration a {

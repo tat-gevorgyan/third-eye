@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../service/data.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-clustered',
@@ -12,11 +13,14 @@ export class ClusteredComponent implements OnInit {
 
 	maxHeaderSize: number = 0;
 
-	constructor(private dataService: DataService) { }
+	constructor(private dataService: DataService,
+		private router: Router) { }
 
 	ngOnInit() {
 		this.clusteredData = this.dataService.getClusteredData();
-		this.getHeaderSize();
+		if (!this.clusteredData.length)
+			this.router.navigate(['/home']);
+		else this.getHeaderSize();
 	}
 
 	getHeaderSize() {
@@ -29,4 +33,11 @@ export class ClusteredComponent implements OnInit {
 		return new Array(this.maxHeaderSize - item['themes'].length);
 	}
 
+	getClusteredString(item: object, theme: string) {
+		let keywords: Array<string> = item['keywords'].split(', ')
+		for (let keyword of keywords) {
+			theme = theme.replace(keyword, `<strong>${keyword}</strong>`);
+		}
+		return theme;
+	}
 }
