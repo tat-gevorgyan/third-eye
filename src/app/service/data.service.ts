@@ -8,6 +8,8 @@ export class DataService {
 
 	private sheetNames: Array<string> = [];
 
+	private inputText: string = '';
+
 	constructor() { }
 
 	public setClusteredData(clusteredData: Array<Object>): void {
@@ -33,5 +35,13 @@ export class DataService {
 
 	public getSheetNames(): Array<string> {
 		return this.sheetNames;
+	}
+
+	public getInputText(): string {
+		return this.inputText;
+	}
+
+	public setInputText(text: string): void {
+		this.inputText = text;
 	}
 }

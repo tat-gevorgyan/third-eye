@@ -123,6 +123,7 @@ export class ImportExcelComponent implements OnInit {
 				text += '\n';
 			text += this.importedData[cell.sheetIndex][cell.index1][cell.index2];
 		}
+		this.dataService.setInputText(text);
 		this.loadingComponent.start();
 		this.clusterService.cluster(text)
 			.subscribe(data => {

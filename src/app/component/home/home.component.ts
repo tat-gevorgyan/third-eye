@@ -39,6 +39,7 @@ export class HomeComponent {
 		this.clusterService.cluster(this.inputText)
 			.subscribe(data => {
 				this.dataService.setClusteredData(data.json());
+				this.dataService.setInputText(this.inputText);
 				this.loadingComponent.setPercent(100);
 			})
 	}
